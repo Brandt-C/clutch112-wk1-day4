@@ -1,0 +1,32 @@
+.footer {
+    border-image-source: linear-gradient(to right, white 10%, lightgray, white 90%);
+    border-image-slice: 1;
+    border-top-width: 2px;
+    border-bottom-width: 0;
+    border-right-width: 0;
+    border-left-width: 0;
+    border-style: solid;
+
+    position: relative;
+}
+
+.footer:before {
+    position: absolute;
+    content: '';
+    width: 90%;
+    height: 2px;
+    z-index: -1;
+    top: 0;
+    left: 50%;
+    background-image: linear-gradient(lightgray, white);
+    transform: translateX(-50%);
+}
+
+.footer-links a:not(:last-of-type) {
+    margin-right: 20px;
+    margin-bottom: 4px;
+}
+
+.footer-text {
+    text-align: center;
+}
